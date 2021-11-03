@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+:root {
+  --dark_blue: #081A59;
+  --white_bg: #ffffff;
+}
+
+*, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.signup-main {
+    width: 100%;
+    display: flex;
+}
+
+.signup-side {
+    width: 35%;
+    height: 100vh;
+    background-color: var(--dark_blue);
+}
+
+.signup-input {
+    width: 65%;
+    height: 100vh;
+    background-color: var(--white_bg);
+}
+
+.signup-side {
+    padding: 5% 3%;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    color: #ffffff;
+}
+
+#signup-logo {
+    width: 50%;
+    margin-bottom:40px;
+}
+
+#welcome{
+    font-size: 3.5vw;
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 5%;
+}
+
+#brief{
+    font-size: 1.3rem;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    opacity: 0.7;
+}
+
+.order {
+    padding: 7% 0 0 5%;
+    width: 100%;
+}
+
+#signup-go {
+    font-size: 3.3vw;
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+    color: #081A59;
+}
+
+#rule {
+    opacity: 0.5;
+    font-style: italic;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.input_field {
+    padding: 2% 5% 0 5%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input {
+    width: 45%;
+    height: 45px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding:  0 7px ;
+    background-color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input#email, input#signup-submit {
+    width: 100%;
+}
+
+#region {
+    width: 45%;
+    height: 45px;
+    border-radius: 5px;
+    padding: 0 5px;
+    border: 1px solid black;
+}
+
+.submit {
+    padding: 2% 5% 0 5%;
+    margin: 5% 0 1.5%;
+}
+
+input#signup-submit {
+    background-color: #081A59;
+    color: #ffffff;
+    font-size: 1.5vw;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px;
+}
+
+#region option {
+    text-transform: capitalize;
+}
+
+#already {
+    text-align: center;
+    color: #081A59;
+    opacity: 0.9;
+}
+
+.submit p a {
+    color: #081A59;
+    font-weight:700;
+    text-decoration: none;
+}
+
+
+
+

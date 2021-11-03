@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+:root {
+  --dark_blue: #081A59;
+  --white_bg: #ffffff;
+}
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+.login_main_container{
+    display: flex;
+    width: 100%;
+}
+
+
+.login_side {
+    margin-top: 5%;
+    width: 65%;
+    display: block;
+    align-items: center;
+}
+
+#my_logo, #the_bug {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.fixing_logo {
+    min-width: 200px;
+    width: 60%;
+}
+
+.login_inputs {
+    background-color: var(--dark_blue);
+    width: 35%;
+    height: 100vh;
+    padding: 7% 5% 0 5%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#header {
+    margin-bottom: 13%;
+}
+
+#login_name {
+    color: var(--white_bg);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    padding-bottom: 2.5rem;
+}
+
+input#email, input#password {
+    width: 100% !important;
+    height: 50px;
+    border-radius: 5px;
+    margin: 3% 0;
+    border: none;
+    padding:  0 10px !important;
+}
+
+.checking {
+    display: flex;
+    justify-content: space-between;
+}
+
+#forgot{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#forgot_password:hover {
+    color: #6C63FF;
+    transition: 0.3s ease;
+}
+
+#remember {
+    display: flex;
+    align-items: center;
+}
+
+label {
+    color: #ffffff;
+    font-size: small;
+    text-align: center;
+}
+
+.now_login {
+    margin: 15% 0 4.5%;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+}
+
+#final_hint {
+    text-align: center;
+    color: #ffffff;
+}
+
+#confirm {
+    cursor: pointer;
+    width: 30%;
+    padding: 7px;
+    color: var(--dark_blue);
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}
+
+#confirm:hover {
+    transition: 0.3s ease;
+    background-color: #63d3ff;
+    color: white;
+}
+
+#remember {
+    font-size: small;
+}
+
+h5 span {
+    color: #6C63FF;
+    cursor: pointer;
+}
+
+h5 span:hover {
+    color: greenyellow;
+    transition: 0.3s ease;
+}
+
+
+@media screen and (min-width: 876px) {
+  
+}
