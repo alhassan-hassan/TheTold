@@ -16,6 +16,10 @@
     display: flex;
 }
 
+#logo-name{
+    display: none;
+}
+
 .signup-side {
     width: 35%;
     height: 100vh;
@@ -48,6 +52,10 @@
     margin-bottom: 5%;
 }
 
+.logo-stuff {
+    width: 100%;
+}
+
 #brief{
     font-size: 1.3rem;
     font-weight: 300;
@@ -73,6 +81,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+#signup-go1 {
+    display: none;
+}
+
 .input_field {
     padding: 2% 5% 0 5%;
     display: flex;
@@ -81,8 +93,33 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+.errordisplay {
+    color: red;
+    margin: -5px 0 0;
+}
+
+.input_field1{
+    padding: 2% 5% 0 5%;
+    margin: 0 5px;
+    width: 98%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.input_con {
+    width: 100%; 
+    margin: 0 5px;
+}
+
+.input_con_email{
+    padding: 2% 5% 0 5%;
+    width: 90%;
+    margin: 0 10px;
+    color: rebeccapurple;
+    background-color: rebeccapurple;
+}
+
 input {
-    width: 45%;
+    width: 98%;
     height: 45px;
     border: 1px solid black;
     border-radius: 5px;
@@ -96,22 +133,22 @@ input#email, input#signup-submit {
 }
 
 #region {
-    width: 45%;
+    width: 98%;
     height: 45px;
     border-radius: 5px;
     padding: 0 5px;
     border: 1px solid black;
 }
 
-.submit {
+.submit1 {
     padding: 2% 5% 0 5%;
-    margin: 5% 0 1.5%;
+    margin: 4% 0 1.2%;
 }
 
 input#signup-submit {
     background-color: #081A59;
     color: #ffffff;
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
     margin-bottom: 10px;
@@ -127,12 +164,123 @@ input#signup-submit {
     opacity: 0.9;
 }
 
-.submit p a {
+.submit1 p a {
     color: #081A59;
     font-weight:700;
     text-decoration: none;
 }
 
+@media only screen and (max-width: 720px) and (min-width: 620px) {
+    #signup-go{
+        font-size: 4vw;
+    }
 
+    .signup-side {
+        padding-top: 10%;
+    }
 
+    .signup-input {
+        padding-top: 5%;
+    }
+}
+
+@media only screen and (max-width: 690px) and (min-width: 350px) {
+    .signup-main {
+        display: block;
+        scroll-behavior: smooth;
+        margin-bottom: 50px;
+    }
+
+    .signup-side {
+        width: 100%;
+        background-color: #081A59;
+        height: 150px;
+        position: fixed;
+    }
+
+    #welcome, #brief {
+        display: none;
+    }
+
+    #logo-name {
+        display: block;
+    }
+
+    .logo-stuff {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+
+    #signup-logo {
+        width: 50px;
+        margin: 0;
+        padding-right: 5px;
+    }
+
+    .signup-input {
+        width: 100%;
+        scroll-behavior: smooth;
+    }
+
+    #signup-go {
+        display: none;
+    }
+
+    #logo-name {
+        font-size: 2rem;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+    }
+
+    .signup-side {
+        text-align: left;
+        padding: 20px;
+    }
+
+    #signup-go1 {
+        display: block;
+        font-size: 2.2rem;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        margin: 5px 0 0 10px;
+    }
+
+    .signup-input {
+        padding-top: 150px;
+    }
+
+    .order {
+        padding: 5px 0 0 35px;
+    }
+
+    .input_field {
+        width: 100%;
+        display: inline-block;
+        margin: 0;
+        padding: 0 30px 0;
+    }
+
+    .input_field1 {
+        width: 100%;
+        display: inline-block;
+        margin: 0 0 0 5px;
+        padding: 0 30px 0;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom:15px;
+    }
+
+    #region {
+        width: 100%;
+    }
+
+    .signup-main {
+        padding-bottom: 30px;
+
+    }
+}
 

@@ -15,7 +15,9 @@
     width: 100%;
 }
 
-
+.login_logo1 {
+    display: none;
+}
 .login_side {
     margin-top: 5%;
     width: 65%;
@@ -27,6 +29,10 @@
     display: flex;
     width: 100%;
     justify-content: center;
+}
+
+#co-name, #login-min {
+    display: none;
 }
 
 .fixing_logo {
@@ -132,6 +138,84 @@ h5 span:hover {
 }
 
 
-@media screen and (min-width: 876px) {
-  
+@media only screen and (max-width: 880px) and (min-width: 570px) {
+    .login_side {
+        width: 50%;
+        margin-top: 15%;
+    }
+
+    .login_inputs{
+        width: 50%;
+    }
+
+    .fixing_logo{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 569px) and (min-width: 300px) {
+    #the_bug, .login_logo, #login_name{
+        display: none;
+    }
+
+    #co-name, #login-min,.login_logo1, .login_main_container  {
+        display: block;
+    }
+
+    .login_side {
+        width: 100%;
+        height: 140px;
+        background-color: #081A59;
+        padding: 10px;
+        margin-top: 0;
+    }
+
+    .login_inputs {
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    #my_logo {
+        align-items: center;
+        color: #ffffff;
+        font-size: 2.2rem;
+        font-weight: bolder;
+        font-family: 'Open Sans', sans-serif;
+        justify-content: left;
+        margin-bottom: 5%;
+    }
+
+    .login_logo1 {
+        width: 13%;
+        margin-right: 5px;
+    }
+
+    #pave-in {
+        color: #ffffff;
+        font-size: 2.4rem;
+        font-weight:bolder;
+        font-family: 'Open Sans', sans-serif;
+        margin-left: 15px;
+    }
+
+    #email {
+        margin-top: 0%;
+    }
+
+    #remember, #forgot {
+        color: #081A59;
+    }
+
+    #confirm {
+        background-color: #081A59;
+        color: #ffffff;
+    }
+
+    #final_hint {
+        color: #081A59;
+    }
+
+    #final_hint span {
+        color: #63d3ff;
+    }
 }
