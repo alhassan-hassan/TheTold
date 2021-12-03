@@ -5,6 +5,9 @@
     require_once (dirname(__FILE__)).'/../classes/user.php';
     $user = new User;
 
+    $email = "";
+    $password = "";
+
     $_SESSION['faulty'] = "";
     if (isset($_POST['login'])) {
         $faulty = "";
@@ -13,12 +16,12 @@
 
         $login = $user->login($email, $password);
         $authentified = $user->db_fetch();
-        $_SESSION['user_id'] =  $authentified["user_id"];
-
+        
         if(!empty($authentified)) {
-            $_SESSION['faulty'];
+            $_SESSION['faulty'] = "";
+            $_SESSION['user_id'] =  $authentified["user_id"];
             sleep(1);
-            //header("Location: ../dashboard/home/home.php");
+            header("Location: ../dashboard/home/home.php");
         }
         else {
             $_SESSION['faulty'] = "Incorrect email or password. Try again!";
@@ -59,10 +62,11 @@
             <input 
                 type="email" placeholder = "Email*" id = "email" 
                 style = "padding: 0 10px; width:100%; height:50px" 
-                name = "email" > <br>
+                name = "email" value = <?=$email?>> <br>
             <input 
                 type="password" placeholder = "Password*" id = "password" 
-                style = "padding: 0 10px; width:100%; height:50px" name = "password">
+                style = "padding: 0 10px; width:100%; height:50px" name = "password"
+                value = <?=$password?>>
 
             <div class = "checking">
                 <label id = "remember" >
@@ -78,7 +82,7 @@
                 <input type="submit" id = "confirm" name = "login" style = "font-size:1rem" >
             </div>
 
-            <h5 id ="final_hint">Don't have an account? <span>Register</span></h5>
+            <h5 id ="final_hint">Don't have an account? <a  href = "../signup_page/signup.php" id = "register">Register</a ></h5>
         </form>
         <input type="hidden" id="custId" name="custId" value = <?= $_SESSION['faulty']?>>
     </div>

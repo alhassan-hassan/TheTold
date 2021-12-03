@@ -16,7 +16,7 @@
 }
 
 .menu-sidebar {
-    width: 250px;
+    width: 280px;
     padding: 20px;
     display: block;
     background-color: var(--dark_blue);
@@ -42,6 +42,11 @@
     margin-bottom: 100px;
 }
 
+.nav_option {
+    text-decoration: none;
+    color: red;
+}
+
 #comp_name {
     font-size: 2.2rem;
     color: #ffffff;
@@ -57,7 +62,7 @@
     align-items: center;
 }
 
-.home-option:hover > .fas {
+.home-option:hover > * {
     color: #27409c;
 }
 
@@ -66,8 +71,12 @@
     margin-right: 9px;
 }
 
-.fa-circle.active {
+#damn1 {
     visibility: visible;
+}
+
+#home-page>* {
+    color: #5a6eb8;
 }
 
 .home-option span {

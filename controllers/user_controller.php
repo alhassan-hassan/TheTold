@@ -16,23 +16,41 @@
 
     function verify_email_fxn($email){
     // create a new instance of user object
-    $user = new User;
+        $user = new User;
 
-    // run the query
-    $run_query = $user->verify_email($email);
+        // run the query
+        $run_query = $user->verify_email($email);
 
-    // if successful
-    if($run_query){
-        // fetch data from database
-        $user_email = $user->db_fetch();
-        if(empty($user_email)){
-            // if empty means the email isn't in the database already
-            return true;
+        // if successful
+        if($run_query){
+            // fetch data from database
+            $user_email = $user->db_fetch();
+            if(empty($user_email)){
+                // if empty means the email isn't in the database already
+                return true;
+            }else{
+                return false;
+            }
         }else{
             return false;
         }
-    }else{
-        return false;
     }
-}
+
+    function getAllNotifications() {
+        // create a new instance of user object
+        $user = new User;
+
+        // run the query
+        $runQuery = $user->getNotifications();
+        $posts = array();
+
+        if(empty($runQuery)){
+            echo "no data";
+        } else {
+            while($record = $user->db_fetch()){
+                $posts[] = $record;
+            }
+            return $posts;
+        }
+    }
 ?>

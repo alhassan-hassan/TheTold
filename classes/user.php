@@ -61,11 +61,12 @@
             return $this->db_query($sql);
         }
 
-        //loggin in
+        // loggin in
         public function login($email, $password) {
             $sql = "SELECT `user_id` FROM `users` WHERE `email`='$email' and `password_` = '$password'";
             return $this->db_query($sql);
         }
+
     }
 
 ?>

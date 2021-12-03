@@ -1,7 +1,6 @@
 <?php 
     include_once (dirname(__FILE__)).'/../../controllers/post_controller.php';
-
-    $allPosts = getPosts();
+    $myPosts = getMyPosts();
 ?>
 
 
@@ -19,7 +18,7 @@
       crossorigin="anonymous"
     />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="posts.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="my_posts.css?v=<?php echo time(); ?>">
 
 </head>
 <body>
@@ -42,22 +41,24 @@
             </div>
             
             <div class = "button-action">
-                <a href = "" id = "post-action2">Public Posts</a>
-                <a href = "my_posts.php" id = "post-action1">My Posts</a>
+                <a href = "posts.php" id = "post-action2" >Public Posts</a>
+                <a href = "" id = "post-action1">My Posts</a>
             </div>
             
-            <div class = "problems">
-                    <?php
-                if (empty($allPosts)) {
+            <div class = "problems">   
+                <?php
+                if (empty($myPosts)) {
                     echo "<div style = 'text-align:center; color:red; margin-top:20%'>
                         NO RECORDS...
                     </div>";
                 } else{
-                    foreach($allPosts as $key => $value){
+                    foreach($myPosts as $key => $value){
                 ?>
-                    <div class = "public">
+                    <div class = "private">
                         <div class = "a-bug">
-                            <img src=<?echo $value['file']?> id = "bug">
+                            <?php 
+                            echo '<img src="data:image/jpeg;base64,'.base64_encode( $value['file'] ).'" id = "bug"/>';
+                            ?>
                             <p id = "bug_name"><?= $value['brief']?></p>
                             <div class = "particulars">
                                 <span id = "parti"><?= $value['lastname'].' '. $value['firstname']?></span>

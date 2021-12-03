@@ -1,15 +1,3 @@
-<?php 
-    include_once (dirname(__FILE__)).'/../../classes/user.php';
-    
-    $user = new User;
-
-    if (isset($_POST['post'])) {
-        $brief = $_POST['problem-brief'];
-        $description = $_POST['problem-description'];
-        $brief = $_POST['problem-brief'];
-    }
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +34,8 @@
                 </div>
             </div>   
             
-            <form method = "POST">
+            <form method = "POST" action = "validatePost.php" enctype="multipart/form-data">
+                <!-- <small><?=$image_errors ?></small> -->
                 <div class = "add-content">
                     <p id = "upload">Upload Post</p>
                     <hr>
@@ -56,7 +45,9 @@
                                 <i class="fas fa-cloud-upload-alt fa-3x"></i> <br>
                                 <span id = "upload-hint">Drag file to upload</span>
                             </div>
-                            <button id = "up-done">Choose file</button>
+                            <div cl ass = "up-done">
+                                <input type="file" name="image" value = "Choose file" id = "up-done">
+                            </div>
                         </div>
     
                         <div class = "up-sec1">
@@ -64,10 +55,10 @@
                             <input type="text" name = "problem-brief" id = "p-brief"><br>
     
                             <span id = "problem-entry"> Description</span> <br>
-                            <textarea name="problem-description" id="p-description" cols="30" rows="10"></textarea>
+                            <textarea name="problem-description" id="p-description" cols="28" rows="10"></textarea>
                         </div>
                     </div>
-                    <button id = "finalize-upload" name = 'post'> POST</button>
+                    <button type = "submit" id = "finalize-upload" name = 'post'> POST</button>
                 </div>
             </form>
         </div>

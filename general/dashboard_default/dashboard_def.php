@@ -23,35 +23,45 @@
                 <span id = "comp_name">TheTold</span>
             </div>
 
-            <div class = "home-option" onclick = "print()">
-                <i class="fas fa-circle fa-xs active"></i>
-                <i class="fas fa-home fa-2x"></i>
-                <span class = "fas">Home</span>
-            </div>
+            <a href="../../dashboard/home/home.php" class = "nav_option">
+                <div class = "home-option" id = home-page>
+                    <i class="fas fa-circle fa-xs" id = damn1></i>
+                    <i class="fas fa-home fa-2x"></i>
+                    <span class = "fas">Home</span>
+                </div>
+            </a>
 
-            <div class = "home-option">
-                <i class="fas fa-circle fa-xs"></i>
-                <i class="fas fa-plus-square fa-2x"></i>
-                <span id = "add">Add Post</span>
-            </div>
+            <a href="../../dashboard/add-post/add-post.php" class = "nav_option">
+                <div class = "home-option" id = "add-page">
+                    <i class="fas fa-circle fa-xs" id = damn2></i>
+                    <i class="fas fa-plus-square fa-2x"></i>
+                    <span id = "add">Add Post</span>
+                </div>
+            </a>
 
-            <div class = "home-option posting">
-                <i class="fas fa-circle fa-xs"></i>
-                <i class="fas fa-database fa-2x"></i>
-                <span id = "post">Posts</span>
-            </div>
+            <a href="../../dashboard/all_posts/posts.php" class = "nav_option">
+                <div class = "home-option posting" id = "post-page">
+                    <i class="fas fa-circle fa-xs" id = damn3></i>
+                    <i class="fas fa-database fa-2x"></i>
+                    <span id = "post">Posts</span>
+                </div>
+            </a>
 
-            <div class = "home-option">
-                <i class="fas fa-circle fa-xs"></i>
-                <i class="fas fa-cog fa-2x"></i>
-                <span>Settings</span>
-            </div>
+            <a href="" class = "nav_option">
+                <div class = "home-option" id = "settins-page">
+                    <i class="fas fa-circle fa-xs" id = damn4></i>
+                    <i class="fas fa-cog fa-2x"></i>
+                    <span>Settings</span>
+                </div>
+            </a>
 
-            <div class = "home-option">
-                <i class="fas fa-circle fa-xs"></i>
-                <i class="fas fa-sign-out-alt fa-2x"></i>
-                <span>Logout</span>
-            </div>
+            <a href="../../login/login.php" class = "nav_option">
+                <div class = "home-option" >
+                    <i class="fas fa-circle fa-xs"></i>
+                    <i class="fas fa-sign-out-alt fa-2x"></i>
+                    <span>Logout</span>
+                </div>
+            </a>
         </div>
     </div>
 

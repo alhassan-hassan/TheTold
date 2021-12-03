@@ -1,12 +1,11 @@
 <?php
-    include_once (dirname(__FILE__)).'/../classes/user.php';
+    include_once (dirname(__FILE__)).'/../classes/posts.php';
 
     function getPosts(){
         // Create new post object
-        $post = new User;
-
+        $post = new Post;
         // Run query
-        $runQuery = $post->post();
+        $runQuery = $post->getPosts();
         $posts = array();
 
         if(empty($runQuery)){
@@ -19,12 +18,11 @@
         }
     }
 
-    function getEachPost($term){
+    function getMyPosts(){
         // Create new post object
         $post = new Post;
-
         // Run query
-        $runQuery = $post->getPost($term);
+        $runQuery = $post->getMyPosts();
         $posts = array();
 
         if(empty($runQuery)){

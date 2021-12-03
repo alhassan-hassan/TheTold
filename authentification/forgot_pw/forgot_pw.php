@@ -1,6 +1,9 @@
-if(isset($_POST['next'])) {
-        header("Location: ../verify_code/verify.php");
-    }
+<?php 
+    if(isset($_POST['next'])) {
+            header("Location: ../verify_code/verify.php");
+        }
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">

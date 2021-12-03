@@ -8,6 +8,9 @@
     $firstname_error = ""; $lastname_error = "";  $email_error = "";  
     $password_error = ""; $con_password_error = ""; $dob_error = ""; 
 
+    $fname = ""; $lname = "";$region = "";$date = "";
+    $email = "";$password = "";$c_password = "";
+
     if (isset($_POST['submit'])){
         $fname = $_POST['first-name'];
         $lname = $_POST['last-name'];
@@ -115,11 +118,15 @@
     
                 <div class = "input_field">
                     <div class = "input_con">
-                        <input type="text" placeholder = "First Name*" name = "first-name" class = "mb-1" id = "fname">
+                        <input type="text" placeholder = "First Name*" 
+                            name = "first-name" class = "mb-1" id = "fname"
+                            value = <?= $fname?>>
                         <small class = "errordisplay"><?=$firstname_error?></small>
                     </div>
                     <div class = "input_con">
-                        <input type="text" placeholder = "Last Name*" name = "last-name" class = "mb-1" id = "lname">
+                        <input type="text" placeholder = "Last Name*" 
+                            name = "last-name" class = "mb-1" id = "lname"
+                            value = <?= $lname?>>
                         <small class = "errordisplay"><?=$lastname_error?></small>
                     </div>
                 </div>
@@ -135,30 +142,37 @@
                         <small class = "errordisplay"></small>
                     </div>
                     <div class = "input_con">
-                        <input type="date" placeholder = "Date of Birth; DD/MM/YYYY*" name = "date" class = "mb-1" id = "date">
+                        <input type="date" placeholder = "Date of Birth; DD/MM/YYYY*" 
+                            name = "date" class = "mb-1" id = "date">
                         <small class = "errordisplay"><?=$dob_error?></small>
                     </div>
                 </div>
                 
                 <div class = "input_field1" class = "input_con_email">
-                    <input type="email" placeholder = "Email*" name = "email" id = "email" class = "mb-1">
+                    <input type="email" placeholder = "Email*" 
+                        name = "email" id = "email" class = "mb-1"
+                        value = <?= $email?>>
                     <small class = "errordisplay"><?=$email_error?></small>
                 </div>
                 
                 <div class = "input_field">
                     <div class = "input_con">
-                        <input type="password" placeholder = "Password*" name = "password" class = "mb-1" id = "password">
+                        <input type="password" placeholder = "Password*" 
+                            name = "password" class = "mb-1" id = "password"
+                            value = <?= $password?>>
                         <small class = "errordisplay"><?=$password_error?></small>
                     </div>
                     <div class = "input_con">
-                        <input type="password" placeholder = "Confirm Password*" name = "c-password" class = "mb-1" id = "c_password">
+                        <input type="password" placeholder = "Confirm Password*" 
+                            name = "c-password" class = "mb-1" id = "c_password"
+                            value = <?= $c_password?>>
                         <small class = "errordisplay"><?=$con_password_error?></small>
                     </div>
                 </div>
 
                 <div class = "submit1">
                     <input type = "submit" name = "submit" value = "Submit" id = "signup-submit">
-                    <p id = "already">Already have an account? <a href="../login/login.php">Login</a></p>
+                    <p id = "already">Already have an account? <a href="../login/login.php" id = "dive_in">Login</a></p>
                 </div>
             </form>
         </div>

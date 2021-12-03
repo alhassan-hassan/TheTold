@@ -128,6 +128,11 @@ input {
     font-family: 'Open Sans', sans-serif;
 }
 
+#dive_in:hover {
+    color: rgb(80, 214, 75);
+    transition: 0.3s ease-in-out;
+}
+
 input#email, input#signup-submit {
     width: 100%;
 }
@@ -152,6 +157,11 @@ input#signup-submit {
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
     margin-bottom: 10px;
+}
+
+input#signup-submit:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
 }
 
 #region option {
