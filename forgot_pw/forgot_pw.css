@@ -39,7 +39,7 @@ body, * {
     margin: 20px 0 10px;
 }
 
-#reset{
+#yourIn{
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
@@ -48,11 +48,14 @@ body, * {
 
 #info{
     font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
+    color: green;
     color: #081a59;
     opacity: 0.5;
     margin-top: 40px;
+}
+
+#info i {
+    color: green;
 }
 
 #inp_email {
@@ -64,8 +67,8 @@ body, * {
 }
 
 #next {
-    width: 50%;
-    height: 35px;
+    width: 70%;
+    height: 38px;
     background-color: #081a59;
     color: #ffffff;
     border-radius: 5px;
@@ -73,4 +76,10 @@ body, * {
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
     margin-top: 20px;
+    cursor: pointer;
+}
+
+#next:hover {
+    transform: scale(1.04);
+    transition: 0.3s ease-in-out;
 }

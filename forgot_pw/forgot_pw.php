@@ -1,6 +1,6 @@
 <?php 
     if(isset($_POST['next'])) {
-            header("Location: ../verify_code/verify.php");
+            header("Location: ../login/login.php");
         }
 ?>
 
@@ -25,19 +25,16 @@
         <div class = "main_info">
             <form action="" method = "POST" class = "form_fp">
                 <div class = "item">
-                    <img src="../../assets/dark_logo_finale.png" id = "logo_f">
+                    <img src="../assets/dark_logo_finale.png" id = "logo_f">
                 </div>
-                <div class = "item" id = "reset">
-                    Reset Password
+                <div class = "item" id = "yourIn">
+                    Registration Successful
                 </div>
                 <div class = "item" id = "info">
-                    Enter email to reset your password
-                </div>
-                <div class = "item"  >
-                    <input type="text" placeholder = "Email*" id = inp_email>
+                    <i class="fas fa-check-circle fa-4x"></i>
                 </div>
                 <div class = "item">
-                    <button id = "next" name= "next"> Next</button>
+                    <button id = "next" name= "next"> Proceed to Login</button>
                 </div>
             </div>
         </form>
