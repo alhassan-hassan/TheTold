@@ -156,6 +156,7 @@
 
 .fa-bell {
      margin-left: 2%;
+     cursor: pointer;
 }
 
 .add-post-main {
@@ -302,4 +303,10 @@
     align-content: center;
     font-family: 'Open Sans', sans-serif;
     border: none;
+}
+
+#loggin-out {
+    outline: none;
+    border: none;
+    background-color: #081A59;
 }

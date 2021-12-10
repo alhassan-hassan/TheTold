@@ -6,9 +6,10 @@
        
         // signing up action
         public function register($fname, $lname, $region, $dob, $email, $password) {
+            $encrypted_pass = md5($password);
             $sql = "INSERT INTO `users`
                 (`fName`, `lName`, `region`, `dob`, `email`, `password_`) 
-                VALUES ('$fname','$lname', '$region', '$dob', '$email', '$password')";
+                VALUES ('$fname','$lname', '$region', '$dob', '$email', '$encrypted_pass')";
             // now let's run the query
             return $this->db_query($sql);
         }
@@ -33,18 +34,15 @@
             return $this->db_query($sql);
         }
 
-        // send a notification
-        public function notify($receiver_id, $date, $ubject, $description) {
-            $sql = "INSERT INTO `notification`
-                (`receiver_id`, `date`, `subject`, `description`)
-                VALUES($receiver_id, $date, $subect, $description)";
-
+        // get all notifications
+        public function getNotifications() {
+            $sql = "SELECT * FROM `notification` order by `date_`";
             return $this->db_query($sql);
         }
 
-        // get all notifications
-        public function getNotifications() {
-            $sql = "SELECT * FROM `notification`";
+        // delete notification
+        public function deleteNotification($notication_id){
+            $sql = "DELETE FROM `notification` where `notification_id` = '$notication_id'";
             return $this->db_query($sql);
         }
 
@@ -63,6 +61,7 @@
 
         // loggin in
         public function login($email, $password) {
+            $encrypted = md5($password);
             $sql = "SELECT `user_id` FROM `users` WHERE `email`='$email' and `password_` = '$password'";
             return $this->db_query($sql);
         }

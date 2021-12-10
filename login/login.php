@@ -1,30 +1,48 @@
 <?php
 
+    // starting a session
     session_start();
 
+    // requiring and importing the necessary files and classes
     require_once (dirname(__FILE__)).'/../classes/user.php';
     $user = new User;
 
+    // setting the email and password fields to empty strings
     $email = "";
     $password = "";
 
+    // set a session for any mistake that can occur after trying to login
     $_SESSION['faulty'] = "";
+
     if (isset($_POST['login'])) {
         $faulty = "";
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $login = $user->login($email, $password);
+        // tryl loggin in
+        $login = $user->login($email, md5($password));
         $authentified = $user->db_fetch();
         
+        // if information is retrieved, user logins
         if(!empty($authentified)) {
+            // getting the user_id, as the user logins. This
+            // helps in retrieving his or information
             $_SESSION['faulty'] = "";
             $_SESSION['user_id'] =  $authentified["user_id"];
+
+            // this makes the user able to access other pages
+            $_SESSION['user_created'] = "TRUE";
+
+            // now redirects to the home page of the user
             sleep(1);
             header("Location: ../dashboard/home/home.php");
         }
+        
+        // if information don't match to any record in the database
+        // inform the user that, the input provided is not valid.
         else {
-            $_SESSION['faulty'] = "Incorrect email or password. Try again!";
+            sleep(2);
+            echo '<script>alert("Invalid email or password. Try again!")</script>';
         }
     }
 ?>

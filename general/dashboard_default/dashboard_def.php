@@ -1,3 +1,11 @@
+<?php
+    // if user logs out, delete his session
+    if (isset($_POST['loggin-out'])) {
+        session_destroy();
+        header("Location: ../../login/login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +39,14 @@
                 </div>
             </a>
 
+             <a href="../../dashboard/analytics/analytics.php" class = "nav_option">
+                <div class = "home-option analytics" id = "analytics-page">
+                    <i class="fas fa-circle fa-xs" id = damn5></i>
+                    <i class="fas fa-chart-area fa-2x"></i>
+                    <span id = "analytics">Analytics</span>
+                </div>
+            </a>
+
             <a href="../../dashboard/add-post/add-post.php" class = "nav_option">
                 <div class = "home-option" id = "add-page">
                     <i class="fas fa-circle fa-xs" id = damn2></i>
@@ -55,16 +71,16 @@
                 </div>
             </a>
 
-            <a href="../../login/login.php" class = "nav_option">
-                <div class = "home-option" >
-                    <i class="fas fa-circle fa-xs"></i>
-                    <i class="fas fa-sign-out-alt fa-2x"></i>
-                    <span>Logout</span>
-                </div>
-            </a>
+            <form method="post">
+                <button class = "nav_option" name = "loggin-out" id = "loggin-out">
+                    <div class = "home-option" >
+                        <i class="fas fa-circle fa-xs"></i>
+                        <i class="fas fa-sign-out-alt fa-2x"></i>
+                        <span>Logout</span>
+                    </div>
+                </button>
+            </form>
         </div>
     </div>
-
-    <script type="text/javascript" src="dashboard_def.js"></script>
 </body>
 </html>

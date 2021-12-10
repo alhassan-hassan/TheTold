@@ -160,6 +160,7 @@
 
 .fa-bell {
      margin-left: 2%;
+     color: #081A59;
 }
 
 .home-page-main {
@@ -185,7 +186,6 @@
 
 .notifications {
     width: 100%;
-    height: 100%;
     /* box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px; */
     margin: 10px;
     border-radius: 10px;
@@ -253,7 +253,15 @@
     margin: 3% 0;
 }
 
+.noti-delete {
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+}
 
-
-
+#loggin-out {
+    outline: none;
+    border: none;
+    background-color: #081A59;
+}
 

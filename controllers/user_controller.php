@@ -26,6 +26,7 @@
             // fetch data from database
             $user_email = $user->db_fetch();
             if(empty($user_email)){
+                
                 // if empty means the email isn't in the database already
                 return true;
             }else{

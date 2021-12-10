@@ -9,7 +9,7 @@ create table users (
     region varchar(30) not null,
     dob date,
     email varchar(50) not null,
-    password_ varchar (16) not null unique
+    password_ varchar (70) not null unique
 );
 
 create table post(
@@ -18,7 +18,7 @@ create table post(
     brief varchar(40) not null,
     description_ text,
     date_ TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    file_content blob not null,
+    file_content varchar(1000) not null,
     foreign key(user_id) references users(user_id)
 );
 

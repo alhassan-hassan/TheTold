@@ -1,4 +1,5 @@
 <?php 
+    //redirect to reset page if clicked
     if(isset($_POST['next'])) {
         header("Location: ../reset_pw/reset.php");
     }
@@ -20,8 +21,10 @@
     />
 </head>
 <body>
+    <!-- main container -->
     <div class="main_pw">
         <div class = "main_info"> 
+            <!-- a form for the information -->
             <form action="" method = "POST">
                 <div class = "item">
                     <img src="../../assets/dark_logo_finale.png" id = "logo_f">

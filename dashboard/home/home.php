@@ -1,3 +1,17 @@
+<?php
+    session_start();
+
+    // if user logs out, delete his session
+    if (isset($_POST['loggin-out'])) {
+        session_destroy();
+    }
+
+    // if user is not created, then redirect back to the login page
+    if (!isset($_SESSION['user_created'])) {
+        header("Location: ../../login/login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +41,7 @@
                             <input type="text" class="form-control" placeholder="Search...">
                         </div>
                         <i class="far fa-user fa-lg"></i>
-                        <i class="far fa-bell fa-lg"></i>
+                        <i class="far fa-bell fa-lg" id = noti-bell></i>
                     </div>
                 </div>
             </div>      
@@ -63,15 +77,53 @@
                     </div>
                     <div class = "option" id = "help">
                         <div class = "icon">
-                            <i class="fas fa-question-circle fa-3x iconic"></i>
+                            <i class="fas fa-bullhorn fa-3x iconic"></i>
                         </div>
                         <div id = "h-deal" class = "option-child">
-                            Help
+                            Announcement
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- redirect to notification page if notification bell is pressed -->
+    <script>
+        const noti = document.getElementById('noti-bell');
+        noti.addEventListener("click", alertHi);
+
+        function alertHi(){
+            window.location = "../notifications/notifications.php"         
+        }
+
+        // upload a post
+        document.getElementById("problem").addEventListener("click", makeAPost)
+
+        function makeAPost(){
+            window.location = "../add-post/add-post.php"         
+        }
+
+        // view public posts
+        document.getElementById("public-post").addEventListener("click", viewPosts)
+
+        function viewPosts(){
+            window.location = "../all_posts/posts.php"         
+        }
+        
+        // view my posts
+        document.getElementById("my-post").addEventListener("click", myPosts)
+
+        function myPosts(){
+            window.location = "../all_posts/my_posts.php"         
+        }
+        
+        // view my posts
+        document.getElementById("help").addEventListener("click", notification)
+
+        function notification(){
+            window.location = "../notifications/notifications.php"         
+        }
+    </script>
 </body>
 </html>

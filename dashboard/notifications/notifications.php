@@ -1,7 +1,13 @@
 <?php 
      include_once (dirname(__FILE__)).'/../../controllers/user_controller.php';
+     include_once (dirname(__FILE__)).'/../../classes/user.php';
 
+     $post = new User;
      $allNotifications = getAllNotifications();
+
+     if (isset($_POST['delete-notification'])){
+         $post->deleteNotification($_POST['delete-notification']);
+     }
 ?>
 
 <!DOCTYPE html>
@@ -39,36 +45,30 @@
                 </div>
             </div>  
             <div class = "content-info">
-                <?php 
-                    foreach($allNotifications as $key => $value){
-                ?>
-                    <div class = "notifications">
-                        <div class = "notifi">
-                            <div class = "name-section">
-                                <div class = "name"><?=$value['sender_name']?></div>
-                                <small><?=$value['date_']?></small>
-                            </div>
-                            <div class = "sub-delete">
-                                <div class = subject><?=$value['subject_']?></div>
-                                <a href="">
-                                    <i class="fas fa-trash" style = "color:rgba(0,0,0,0.5)"></i>
-                                </a>
-                            </div>
-                            <div class = "main">
-                                <?=$value['description_']?>  
+                <form method = "POST">
+                    <?php 
+                        foreach($allNotifications as $key => $value){
+                    ?>
+                        <div class = "notifications">
+                            <div class = "notifi">
+                                <div class = "name-section">
+                                    <div class = "name"><?=$value['sender_name']?></div>
+                                    <small><?=$value['date_']?></small>
+                                </div>
+                                <div class = "sub-delete">
+                                    <div class = subject><?=$value['subject_']?></div>
+                                    <button name = "delete-notification" class = "noti-delete" value = <?=$value['notification_id']?>>
+                                        <i class="fas fa-trash" style = "color:rgba(0,0,0,0.5)"></i>
+                                    </button>
+                                </div>
+                                <div class = "main">
+                                    <?=$value['description_']?>  
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <?php 
-                }?>
-                <!-- <div class = "simple-notice">
-                    <div id = notice>Important Notice</div>
-                    <p id = "not-message">
-                        afdfdhjfdjjsfhsdmfn .dmmjfskfh djfh df m d h fskfdfndfjsfds sdsdhsdsd jsdads. 
-                        afdfdhjf djjsfhsdmfn .dmmjfskfh djfhdfm dhfskfdfndf jsfdssdsd hsdsdjsdads.
-                        afdfdhjfdjjs  fhsdmfn.dmmjfskf hdjfhdfmdh fskfdfndf jsfdssdsdhsd sdjsdads.
-                    </p>
-                </div>    -->
+                        <?php 
+                    }?>
+                </form>
             </div> 
         </div>   
     </div>

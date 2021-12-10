@@ -160,6 +160,7 @@
 
 .fa-bell {
      margin-left: 2%;
+     cursor: pointer;
 }
 
 .home-page-main {
@@ -239,4 +240,10 @@
     color: #081A59;
     position: relative;
     top: 15px;
+}
+
+#loggin-out {
+    outline: none;
+    border: none;
+    background-color: #081A59;
 }

@@ -62,6 +62,15 @@
     color: #27409c;
 }
 
+.nav_option {
+    text-decoration: none;
+}
+
+#add-page > *{
+    color: #27409c;
+    visibility: visible;
+}
+
 .fa-circle {
     visibility: hidden;
     margin-right: 9px;
@@ -152,6 +161,7 @@
 
 .fa-bell {
      margin-left: 2%;
+     cursor: pointer;
 }
 
 .add-post-main {
@@ -206,7 +216,7 @@
     align-items: center;
 }
 
-#another {
+#another-post, #posts {
     width: 320px;
     height: 45px;
     background-color: #081A59;
@@ -222,4 +232,14 @@
 #another:hover, #another1:hover {
     transform: scale(1.05);
     transition: 0.3s ease-in-out;
+}
+
+#p-description {
+    height: 100px !important;
+}
+
+#loggin-out {
+    outline: none;
+    border: none;
+    background-color: #081A59;
 }

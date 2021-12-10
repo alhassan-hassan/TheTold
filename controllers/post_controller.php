@@ -8,6 +8,8 @@
         $runQuery = $post->getPosts();
         $posts = array();
 
+        // if results are returned, put each row into the same array
+        // else there is no data
         if(empty($runQuery)){
             echo "no data";
         } else {

@@ -1,3 +1,16 @@
+<?php
+    session_start();
+
+    // if user logs out, delete his session
+    if (isset($_POST['loggin-out'])) {
+        session_destroy();
+    }
+
+    // if user is not created, then redirect back to the login page
+    if (!isset($_SESSION['user_created'])) {
+        header("Location: ../../login/login.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +45,7 @@
                             <input type="text" class="form-control" placeholder="Search...">
                         </div>
                         <i class="far fa-user fa-lg"></i>
-                        <i class="far fa-bell fa-lg"></i>
+                        <i class="far fa-bell fa-lg" id = "noti-bell"></i>
                     </div>
                 </div>
             </div> 
@@ -53,11 +66,31 @@
                     Check your notifications for updates on your posts.
                 </p>
                 <div class = "action-mern">
-                    <button id = "another">Submit Another Post</button>
-                    <button id = "another">See Posts</button>
+                    <button id = "another-post">Submit Another Post</button>
+                    <button id = "posts">See Posts</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+
+        // getting the posts in the html
+        const another_post = document.getElementById('another-post');
+        const posts = document.getElementById('posts');
+
+        // adding an event listener to the post
+        another_post.addEventListener("click", post);
+        posts.addEventListener("click", allPost);
+
+        //redirecting to the various posts pages
+        function post(){
+            window.location = "../add-post/add-post.php"         
+        }
+        
+        function allPost(){
+            window.location = "../all_posts/my_posts.php"         
+        }
+    </script>
 </body>
 </html>

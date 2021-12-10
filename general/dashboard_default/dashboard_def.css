@@ -84,7 +84,7 @@
 }
 
 .posting {
-    margin-bottom: 220px;
+    margin-bottom: 210px;
 }
 
 .main-content {
@@ -147,4 +147,10 @@
 
 .fa-bell {
      margin-left: 2%;
+}
+
+#loggin-out {
+    outline: none;
+    border: none;
+    background-color: #081A59;
 }
