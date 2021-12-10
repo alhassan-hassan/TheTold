@@ -90,10 +90,6 @@
                 <label id = "remember" >
                     <input type="checkbox">Remember me
                 </label>
-                
-                <a href="../authentification/forgot_pw/forgot_pw.php" id = "forgot">
-                    <span id = "forgot_password" style = "font-size:small">Forgot password?</span>
-                </a> 
             </div>
 
             <div class = "now_login">
