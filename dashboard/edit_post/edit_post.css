@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+.editForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.form_edit {
+    width: 450px;
+    height: 70%;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    display: block;
+}
+
+.header {
+    background-color: #081a59;
+    width: 100%;
+    height: 100px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0 3%;
+    font-size: 2.7rem;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+}
+
+#edit-logo {
+    width: 60px;
+    margin-right: 5px;
+}
+
+.main-form-content {
+    width: 100%;
+    display: block;
+    padding: 3% 5%;
+}
+
+label, input, textarea {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    height: 40px;
+    color: #081a59;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
+textarea {
+    height: 80px;
+    padding-left: 5px;
+    font-weight: 400;
+}
+
+input {
+    border: 0.5px solid rgb(39, 37, 37);
+    padding-left: 5px;
+    font-weight: 400;
+}
+
+.brief-des {
+    margin-bottom: 30px;
+}
+
+#submit {
+    width: 100%;
+    height: 50px;
+    background-color: #081a59;
+    color: white;
+    text-align: center;   
+    margin-top: 50px;
+    font-size: 1.2rem;
+}
+
+#submit:hover {
+    transform: scale(1.04);
+    transition: 0.3s ease-in-out;
+}
+
+small {
+    color: red;
+    text-align: center;
+}
+
+#loggin-out {
+    outline: none;
+    border: none;
+    background-color: #081A59;
+}
